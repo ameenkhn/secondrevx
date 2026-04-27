@@ -19,7 +19,6 @@
   <link rel="preconnect" href="https://cdn.prod.website-files.com" crossorigin />
   <link rel="dns-prefetch" href="https://affiliate.exlyapp.com" />
   <link rel="dns-prefetch" href="https://t.contentsquare.net" />
-
   <link rel="dns-prefetch" href="https://connect.facebook.net" />
   <link rel="preload" as="image"
     href="https://cdn.prod.website-files.com/686512b3b26f4afedae0d452/687a092b27efcb468d635b5d_Hand.avif"
@@ -77,7 +76,66 @@
       --sidebar-accent: 228 36% 90%;
       --sidebar-accent-foreground: 240 18% 9%;
       --sidebar-border: 220 14% 84%;
-      --sidebar-ring: 333 88% 62%
+      --sidebar-ring: 333 88% 62%;
+
+      /* ============================================================
+         RevX brand tokens — single source of truth for the LP theme.
+         Direction: cool-neutral premium SaaS, yellow as sole accent.
+         (Phase 1: introduced. Phase 2+ will replace inline hexes.)
+         ============================================================ */
+
+      /* Brand — gold accent */
+      --rx-brand-50: #fff8e1;
+      --rx-brand-100: #fff1c2;
+      --rx-brand-200: #ffe375;
+      --rx-brand-300: #ffd84d;
+      --rx-brand-500: #ffb800;
+      --rx-brand-600: #e6a200;
+      --rx-brand-700: #b07c00;
+      --rx-brand-800: #8a6100;
+
+      /* Neutrals — cool slate */
+      --rx-ink-950: #0a0f1e;
+      --rx-ink-900: #131829;
+      --rx-ink-800: #1c2235;
+      --rx-ink-700: #2c3142;
+      --rx-ink-500: #5b6478;
+      --rx-ink-400: #8089a0;
+      --rx-ink-300: #aab1c1;
+      --rx-ink-200: #e4e7ee;
+      --rx-ink-100: #f3f5f9;
+      --rx-ink-50: #f9fafc;
+      --rx-white: #ffffff;
+
+      /* Semantic */
+      --rx-success: #10b981;
+      --rx-danger: #dc2626;
+      --rx-info: #2563eb;
+
+      /* Surfaces — semantic aliases for common usage */
+      --rx-surface-page: var(--rx-white);
+      --rx-surface-subtle: var(--rx-ink-50);
+      --rx-surface-muted: var(--rx-ink-100);
+      --rx-surface-dark: var(--rx-ink-950);
+      --rx-surface-tint: var(--rx-brand-50);
+
+      /* Text — semantic aliases */
+      --rx-text-primary: var(--rx-ink-700);
+      --rx-text-secondary: var(--rx-ink-500);
+      --rx-text-muted: var(--rx-ink-300);
+      --rx-text-on-dark: var(--rx-white);
+      --rx-text-on-brand: var(--rx-ink-950);
+
+      /* Borders */
+      --rx-border-subtle: var(--rx-ink-200);
+      --rx-border-strong: var(--rx-ink-300);
+      --rx-border-brand: var(--rx-brand-500);
+
+      /* Elevation — shadows */
+      --rx-shadow-sm: 0 1px 2px rgba(10, 15, 30, .06);
+      --rx-shadow-md: 0 6px 16px -8px rgba(10, 15, 30, .12), 0 2px 6px -2px rgba(10, 15, 30, .06);
+      --rx-shadow-lg: 0 24px 48px -20px rgba(10, 15, 30, .18), 0 8px 20px -8px rgba(10, 15, 30, .08);
+      --rx-shadow-brand: 0 12px 28px -10px rgba(255, 184, 0, .35)
     }
 
     * {
@@ -177,7 +235,7 @@
       background-image: radial-gradient(circle, #c9ced8 1.4px, transparent 1.4px);
       background-size: 44px 44px;
       background-position: -8px -8px;
-      color: #161626;
+      color: var(--rx-ink-950);
       min-height: 100vh;
       padding-bottom: 9.1rem;
       overflow-x: hidden
@@ -3399,7 +3457,7 @@
     .exly-problem-glyph {
       width: 1.5rem;
       height: 1.5rem;
-      color: #ea5d77;
+      color: var(--rx-brand-700);
       flex: 0 0 auto;
       margin-top: 0.05rem;
       animation: exly-soft-pulse 2.8s ease-in-out infinite
@@ -7899,7 +7957,7 @@
       width: 6px;
       height: 6px;
       border-radius: 999px;
-      background: #ffb800;
+      background: var(--rx-brand-500);
       box-shadow: 0 0 0 4px rgba(255, 184, 0, .18);
       animation: rx-pulse 2s ease-in-out infinite
     }
@@ -7919,7 +7977,7 @@
     .rx-eyebrow.is-dark {
       background: linear-gradient(120deg, rgba(255, 255, 255, .10), rgba(255, 255, 255, .04));
       border-color: rgba(255, 255, 255, .18);
-      color: #fff1b8
+      color: var(--rx-brand-100)
     }
 
     /* Section base */
@@ -7944,7 +8002,7 @@
       font-weight: 800;
       letter-spacing: -.02em;
       line-height: 1.06;
-      color: #161626;
+      color: var(--rx-ink-950);
       max-width: 24ch
     }
 
@@ -7952,7 +8010,7 @@
       font-family: 'Instrument Serif', Georgia, serif;
       font-style: italic;
       font-weight: 400;
-      color: #d97706
+      color: var(--rx-brand-700)
     }
 
     .rx-section-head p {
@@ -8033,7 +8091,7 @@
     }
 
     .rx-villain-body p {
-      color: #cfcfe0;
+      color: var(--rx-ink-200);
       font-size: 1.02rem;
       line-height: 1.65;
       margin-bottom: 1rem
@@ -8071,7 +8129,7 @@
       font-size: .74rem;
       letter-spacing: .18em;
       text-transform: uppercase;
-      color: #9aa0c2;
+      color: var(--rx-ink-300);
       font-weight: 700
     }
 
@@ -8096,7 +8154,7 @@
     .rx-tax-cell-spend .rx-spend-bar i {
       display: block;
       height: 100%;
-      background: linear-gradient(90deg, #5f6cff, #a78bfa);
+      background: linear-gradient(90deg, var(--rx-brand-500), var(--rx-brand-300));
       transform: scaleX(0);
       transform-origin: left;
       transition: transform 1.4s cubic-bezier(.22, .75, .28, 1)
@@ -8104,13 +8162,13 @@
 
     .rx-tax-cell-cut {
       font-weight: 800;
-      color: #ffd84d;
+      color: var(--rx-brand-300);
       font-size: 1.08rem;
       font-variant-numeric: tabular-nums
     }
 
     .rx-tax-cell-extra {
-      color: #9aa0c2;
+      color: var(--rx-ink-300);
       display: flex;
       align-items: center;
       gap: .5rem;
@@ -8122,12 +8180,12 @@
       width: 8px;
       height: 8px;
       border-radius: 999px;
-      background: #ffd84d;
+      background: var(--rx-brand-300);
       box-shadow: 0 0 0 4px rgba(255, 184, 0, .2)
     }
 
     .rx-tax-row.is-strategy .rx-tax-cell-extra {
-      color: #fff1b8;
+      color: var(--rx-brand-100);
       font-style: italic
     }
 
@@ -8164,9 +8222,29 @@
       width: 10px;
       height: 10px;
       border-radius: 999px;
-      background: #ffd84d;
+      background: var(--rx-brand-300);
       box-shadow: 0 0 12px #ffd84d;
       animation: rx-pulse 1.6s ease-in-out infinite
+    }
+
+    @media (max-width:640px) {
+      .rx-villain-punch {
+        display: block;
+        line-height: 1.5;
+        padding: 1rem 1.1rem;
+        font-size: 1.02rem;
+        text-wrap: balance;
+      }
+
+      .rx-villain-punch::before {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 .45rem 2px 0;
+      }
+
+      .rx-villain-punch .rx-hl {
+        white-space: nowrap;
+      }
     }
 
     /* SVG line chart in villain */
@@ -8183,7 +8261,7 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: .6rem;
-      color: #9aa0c2;
+      color: var(--rx-ink-300);
       font-size: .74rem;
       letter-spacing: .18em;
       text-transform: uppercase;
@@ -8191,7 +8269,7 @@
     }
 
     .rx-tax-chart-head span:last-child {
-      color: #ffd84d
+      color: var(--rx-brand-300)
     }
 
     .rx-tax-chart svg {
@@ -8244,7 +8322,7 @@
       width: min(1100px, calc(100% - 2rem));
       padding: 2.2rem 2rem;
       border-radius: 24px;
-      background: linear-gradient(120deg, #fff, #fffbef);
+      background: linear-gradient(120deg, var(--rx-white), var(--rx-brand-50));
       border: 1px solid rgba(255, 184, 0, .18);
       box-shadow: 0 20px 50px -30px rgba(255, 184, 0, .18), 0 8px 18px -14px rgba(20, 12, 40, .08);
       display: grid;
@@ -8268,7 +8346,7 @@
       font-weight: 800;
       letter-spacing: -.01em;
       line-height: 1.18;
-      color: #161626
+      color: var(--rx-ink-950)
     }
 
     .rx-ctablock p {
@@ -8335,7 +8413,7 @@
       position: relative;
       border-radius: 22px;
       padding: 1.6rem 1.3rem 1.4rem;
-      background: linear-gradient(180deg, #fff, #fbfbff);
+      background: linear-gradient(180deg, var(--rx-white), var(--rx-ink-50));
       border: 1px solid #ececf6;
       box-shadow: 0 10px 30px -22px rgba(20, 12, 40, .18);
       transition: transform .35s cubic-bezier(.22, .75, .28, 1), box-shadow .35s ease, border-color .35s ease;
@@ -8353,7 +8431,7 @@
       right: 0;
       top: 0;
       height: 3px;
-      background: linear-gradient(90deg, #ffb800, #5f6cff);
+      background: linear-gradient(90deg, var(--rx-brand-300), var(--rx-brand-500));
       transform: scaleX(0);
       transform-origin: left;
       transition: transform .5s ease .15s
@@ -8386,7 +8464,7 @@
       justify-content: center;
       background: linear-gradient(135deg, #fff5d6, #fff);
       border: 1px solid rgba(255, 184, 0, .32);
-      color: #d97706;
+      color: var(--rx-brand-700);
       box-shadow: inset 0 0 0 1px #fff, 0 6px 14px -8px rgba(255, 184, 0, .4)
     }
 
@@ -8399,7 +8477,7 @@
       font-size: 1.05rem;
       font-weight: 800;
       letter-spacing: -.01em;
-      color: #161626
+      color: var(--rx-ink-950)
     }
 
     .rx-leak-card p {
@@ -8502,10 +8580,10 @@
       margin-top: 1.6rem;
       padding: 1.2rem 1.4rem;
       border-radius: 18px;
-      background: linear-gradient(120deg, #fffaeb, #fff);
+      background: linear-gradient(120deg, var(--rx-brand-50), var(--rx-white));
       border: 1px dashed rgba(255, 184, 0, .4);
       font-weight: 700;
-      color: #161626;
+      color: var(--rx-ink-950);
       font-size: 1.05rem;
       display: flex;
       align-items: center;
@@ -8515,16 +8593,36 @@
     .rx-leaks-bottom svg {
       width: 22px;
       height: 22px;
-      color: #d97706;
+      color: var(--rx-brand-700);
       flex: none
     }
 
     .rx-leaks-bottom em {
       font-family: 'Instrument Serif', Georgia, serif;
       font-style: italic;
-      color: #d97706;
+      color: var(--rx-brand-700);
       font-weight: 400;
       font-size: 1.15em
+    }
+
+    @media (max-width:640px) {
+      .rx-leaks-bottom {
+        align-items: flex-start;
+        padding: 1rem 1.05rem;
+        font-size: .96rem;
+        line-height: 1.55;
+        gap: .6rem;
+      }
+
+      .rx-leaks-bottom svg {
+        width: 20px;
+        height: 20px;
+        margin-top: .2rem;
+      }
+
+      .rx-leaks-bottom .rx-hl {
+        white-space: nowrap;
+      }
     }
 
     /* ===== FIX in one line ===== */
@@ -8550,7 +8648,7 @@
       border-radius: 999px;
       background: #fff;
       border: 1px solid #ececf6;
-      color: #161626;
+      color: var(--rx-ink-950);
       font-weight: 600;
       font-size: .95rem;
       box-shadow: 0 6px 16px -12px rgba(20, 12, 40, .18)
@@ -8585,8 +8683,8 @@
       width: 56px;
       height: 56px;
       border-radius: 999px;
-      background: linear-gradient(135deg, #ffb800, #5f6cff);
-      color: #fff;
+      background: linear-gradient(135deg, var(--rx-brand-300), var(--rx-brand-600));
+      color: var(--rx-text-on-brand);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -8616,11 +8714,11 @@
     }
 
     .rx-fix-col.is-trad {
-      background: linear-gradient(180deg, #f6f7fa, #fff)
+      background: linear-gradient(180deg, var(--rx-ink-100), var(--rx-white))
     }
 
     .rx-fix-col.is-trad .rx-fix-col-title {
-      color: #7d7d95
+      color: var(--rx-text-secondary)
     }
 
     .rx-fix-col.is-trad .rx-fix-col-title::before {
@@ -8632,12 +8730,12 @@
     }
 
     .rx-fix-col.is-revx {
-      background: linear-gradient(180deg, #fffaeb, #fff);
+      background: linear-gradient(180deg, var(--rx-brand-50), var(--rx-white));
       border-left: 1px solid #ececf6
     }
 
     .rx-fix-col.is-revx .rx-fix-col-title {
-      color: #d97706
+      color: var(--rx-brand-700)
     }
 
     .rx-fix-col.is-revx .rx-fix-col-title::before {
@@ -8645,7 +8743,7 @@
       width: 10px;
       height: 10px;
       border-radius: 999px;
-      background: #ffb800;
+      background: var(--rx-brand-500);
       box-shadow: 0 0 0 4px rgba(255, 184, 0, .2)
     }
 
@@ -8657,7 +8755,7 @@
       border-top: 1px dashed #ececf6;
       font-size: .97rem;
       line-height: 1.45;
-      color: #161626
+      color: var(--rx-ink-950)
     }
 
     .rx-fix-row:first-of-type {
@@ -8676,21 +8774,21 @@
     }
 
     .rx-fix-col.is-revx .rx-fix-row svg {
-      color: #16a34a
+      color: var(--rx-success)
     }
 
     .rx-fix-bottom {
       margin-top: 1.6rem;
       text-align: center;
       font-weight: 700;
-      color: #161626;
+      color: var(--rx-ink-950);
       font-size: 1.05rem
     }
 
     .rx-fix-bottom em {
       font-family: 'Instrument Serif', Georgia, serif;
       font-style: italic;
-      color: #d97706;
+      color: var(--rx-brand-700);
       font-weight: 400;
       font-size: 1.15em
     }
@@ -8725,16 +8823,15 @@
       gap: 1.2rem;
       padding: .55rem .8rem;
       border-radius: 999px;
-      background: linear-gradient(120deg, rgba(14, 19, 38, .92), rgba(26, 14, 34, .92));
-      border: 1px solid rgba(255, 184, 0, .32);
-      box-shadow: 0 1px 0 rgba(255, 255, 255, .08) inset, 0 18px 40px -28px rgba(20, 12, 40, .55), 0 12px 28px -16px rgba(255, 184, 0, .18);
-      backdrop-filter: saturate(160%) blur(14px);
-      -webkit-backdrop-filter: saturate(160%) blur(14px)
+      background: linear-gradient(120deg, #0e1326, #1a0e22);
+      border: 1px solid rgba(255, 184, 0, .45);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .1) inset, 0 18px 40px -22px rgba(0, 0, 0, .55), 0 10px 28px -14px rgba(255, 184, 0, .22)
     }
 
     .rx-nav.is-stuck .rx-nav-inner {
-      background: linear-gradient(120deg, rgba(14, 19, 38, .86), rgba(26, 14, 34, .86));
-      border-color: rgba(255, 184, 0, .4)
+      background: linear-gradient(120deg, #0a0e1c, #160c1e);
+      border-color: rgba(255, 184, 0, .6);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .12) inset, 0 22px 48px -20px rgba(0, 0, 0, .7), 0 12px 30px -12px rgba(255, 184, 0, .32)
     }
 
     .rx-nav-brand {
@@ -8799,7 +8896,7 @@
       font-size: .7rem;
       font-weight: 700;
       letter-spacing: .06em;
-      color: #ffd84d;
+      color: var(--rx-brand-300);
       font-family: 'Inter', sans-serif
     }
 
@@ -8807,7 +8904,7 @@
       width: 6px;
       height: 6px;
       border-radius: 999px;
-      background: #ffb800;
+      background: var(--rx-brand-500);
       box-shadow: 0 0 0 3px rgba(255, 184, 0, .25);
       animation: rx-pulse 2s ease-in-out infinite
     }
@@ -8829,7 +8926,7 @@
       padding: .5rem .9rem;
       font-size: .85rem;
       font-weight: 700;
-      color: #dcd9e8;
+      color: #f3f1fa;
       border-radius: 999px;
       letter-spacing: .005em;
       transition: color .25s ease;
@@ -8841,7 +8938,7 @@
     }
 
     .rx-nav-links a.is-active {
-      color: #1a1330
+      color: var(--rx-ink-950)
     }
 
     .rx-nav-indicator {
@@ -8877,7 +8974,7 @@
       padding: .65rem 1.1rem;
       border-radius: 999px;
       background: linear-gradient(120deg, #ffd84d, #ffb800);
-      color: #1a1330;
+      color: var(--rx-ink-950);
       font-size: .86rem;
       font-weight: 900;
       letter-spacing: .005em;
@@ -8945,7 +9042,7 @@
     }
 
     .rx-nav.is-open .rx-nav-burger span {
-      background: #ffd84d
+      background: var(--rx-brand-300)
     }
 
     .rx-nav.is-open .rx-nav-burger span:nth-child(1) {
@@ -8984,13 +9081,13 @@
       border-radius: 14px;
       font-size: 1rem;
       font-weight: 700;
-      color: #161626;
+      color: var(--rx-ink-950);
       text-decoration: none;
       transition: background .25s ease, color .25s ease
     }
 
     .rx-nav-sheet a:hover {
-      background: #fff5d6
+      background: var(--rx-brand-100)
     }
 
     .rx-nav-sheet-cta {
@@ -9141,7 +9238,7 @@
       width: 9px;
       height: 9px;
       border-radius: 999px;
-      background: #ffb800;
+      background: var(--rx-brand-500);
       box-shadow: 0 0 12px #ffb800
     }
 
@@ -9183,7 +9280,7 @@
       display: inline-flex;
       align-items: center;
       gap: .55rem;
-      color: #fff1b8
+      color: var(--rx-brand-100)
     }
 
     .rx-sticky-text .exly-sticky-callbar-copy-text {
@@ -9200,7 +9297,7 @@
       border-radius: 8px;
       background: linear-gradient(135deg, rgba(255, 184, 0, .28), rgba(255, 184, 0, .08));
       border: 1px solid rgba(255, 184, 0, .4);
-      color: #ffd84d;
+      color: var(--rx-brand-300);
       flex: none
     }
 
@@ -9279,7 +9376,7 @@
       font-size: .62rem;
       letter-spacing: .14em;
       text-transform: uppercase;
-      color: #9aa0c2;
+      color: var(--rx-ink-300);
       font-weight: 700
     }
 
@@ -9301,7 +9398,7 @@
       padding: .78rem 1.25rem;
       border-radius: 999px;
       background: linear-gradient(120deg, #ffd84d, #ffb800);
-      color: #1a1330;
+      color: var(--rx-ink-950);
       font-size: .92rem;
       font-weight: 900;
       letter-spacing: .005em;
@@ -9511,7 +9608,7 @@
       border-radius: 999px;
       background: linear-gradient(120deg, rgba(255, 184, 0, .18), rgba(56, 132, 255, .10));
       border: 1px solid rgba(255, 184, 0, .42);
-      color: #fff1b8;
+      color: var(--rx-brand-100);
       font-size: .7rem;
       font-weight: 800;
       letter-spacing: .18em;
@@ -9522,7 +9619,7 @@
       width: 7px;
       height: 7px;
       border-radius: 999px;
-      background: #ffb800;
+      background: var(--rx-brand-500);
       box-shadow: 0 0 0 4px rgba(255, 184, 0, .22);
       animation: rx-pulse 2s ease-in-out infinite
     }
@@ -9548,13 +9645,13 @@
 
     .rx-foot-sub {
       max-width: 54ch;
-      color: #cfcfe0;
+      color: var(--rx-ink-200);
       font-size: 1.05rem;
       line-height: 1.55
     }
 
     .rx-foot-sub .rx-hl {
-      color: #1a1330;
+      color: var(--rx-ink-950);
       font-size: .96em;
       padding: .05em .35em
     }
@@ -9566,7 +9663,7 @@
       padding: 1.1rem 1.9rem;
       border-radius: 999px;
       background: linear-gradient(120deg, #ffd84d, #ffb800);
-      color: #1a1330;
+      color: var(--rx-ink-950);
       font-weight: 900;
       font-size: 1.05rem;
       border: 1px solid rgba(255, 255, 255, .4);
@@ -9626,14 +9723,14 @@
     .rx-foot-stats strong {
       font-size: 1.4rem;
       font-weight: 900;
-      color: #ffd84d;
+      color: var(--rx-brand-300);
       letter-spacing: -.01em;
       font-family: 'Inter', sans-serif
     }
 
     .rx-foot-stats span {
       font-size: .74rem;
-      color: #9aa0c2;
+      color: var(--rx-ink-300);
       letter-spacing: .04em
     }
 
@@ -9651,7 +9748,7 @@
       width: max-content;
       animation: rx-marquee 38s linear infinite;
       align-items: center;
-      color: #fff1b8;
+      color: var(--rx-brand-100);
       font-size: .95rem;
       font-weight: 700;
       letter-spacing: .04em
@@ -9662,7 +9759,7 @@
     }
 
     .rx-foot-marquee-track span[aria-hidden="true"] {
-      color: #ffb800
+      color: var(--rx-brand-500)
     }
 
     .rx-foot-wordmark {
@@ -9725,14 +9822,14 @@
     }
 
     .rx-foot-brand strong span {
-      color: #9aa0c2;
+      color: var(--rx-ink-300);
       font-weight: 500;
       font-size: .85rem;
       margin-left: .35rem
     }
 
     .rx-foot-brand small {
-      color: #9aa0c2;
+      color: var(--rx-ink-300);
       font-size: .82rem
     }
 
@@ -9747,7 +9844,7 @@
       font-size: .66rem;
       letter-spacing: .2em;
       font-weight: 800;
-      color: #7d7d95;
+      color: var(--rx-text-secondary);
       text-transform: uppercase
     }
 
@@ -9755,7 +9852,7 @@
       display: flex;
       align-items: center;
       gap: .55rem;
-      color: #fff1b8;
+      color: var(--rx-brand-100);
       font-size: .92rem;
       font-weight: 700;
       letter-spacing: .01em
@@ -9781,7 +9878,7 @@
     }
 
     .rx-foot-bottom-mid {
-      color: #9aa0c2
+      color: var(--rx-ink-300)
     }
 
     @media (max-width:880px) {
@@ -9865,7 +9962,7 @@
       position: relative;
       display: inline-block;
       padding: .05em .35em;
-      color: #1a1330;
+      color: var(--rx-ink-950);
       font-weight: 800;
       border-radius: 6px;
       background: linear-gradient(120deg, #ffd84d 0%, #ffb800 100%);
@@ -9912,7 +10009,7 @@
     /* light-on-dark variant */
     .rx-hl.is-light {
       background: linear-gradient(120deg, #ffe375 0%, #ffd84d 100%);
-      color: #1a1330
+      color: var(--rx-ink-950)
     }
 
     /* underline marker (skinny) variant */
@@ -9950,7 +10047,7 @@
     .rx-stack-wrap .rx-hl,
     .rx-final .rx-hl,
     .rx-marquee-band .rx-hl {
-      color: #1a1330
+      color: var(--rx-ink-950)
     }
 
     /* ===== Creative banner image ===== */
@@ -10042,7 +10139,7 @@
       padding: 1rem 1.2rem;
       max-width: 780px;
       border-radius: 999px;
-      background: linear-gradient(120deg, #fff, #fbfbff);
+      background: linear-gradient(120deg, var(--rx-white), var(--rx-ink-50));
       border: 1px solid #ececf6;
       box-shadow: 0 16px 40px -28px rgba(20, 12, 40, .18)
     }
@@ -10278,7 +10375,7 @@
     .rx-stack-card p {
       font-size: .93rem;
       line-height: 1.55;
-      color: #cfcfe0
+      color: var(--rx-ink-200)
     }
 
     /* ===== PROCESS · Journey Map ===== */
@@ -10353,7 +10450,7 @@
       justify-content: center;
       font-weight: 900;
       font-size: .95rem;
-      color: #161626;
+      color: var(--rx-ink-950);
       letter-spacing: .02em;
       font-variant-numeric: tabular-nums;
       transform: translate(-50%, -50%) scale(.4);
@@ -10403,8 +10500,8 @@
     .exly-reveal.is-visible .rx-journey-node.n4 {
       transition-delay: 1.6s;
       background: linear-gradient(135deg, #ffd84d, #ffb800);
-      color: #1a1330;
-      border-color: #ffb800;
+      color: var(--rx-ink-950);
+      border-color: var(--rx-brand-500);
       box-shadow: 0 0 0 6px rgba(255, 184, 0, .22), 0 12px 26px -10px rgba(255, 184, 0, .65)
     }
 
@@ -10494,7 +10591,7 @@
 
     .rx-journey-card.is-final .rx-journey-num {
       -webkit-text-stroke: 0;
-      color: #d97706
+      color: var(--rx-brand-700)
     }
 
     .rx-journey-tag {
@@ -10517,7 +10614,7 @@
       font-size: 1.15rem;
       font-weight: 800;
       letter-spacing: -.012em;
-      color: #161626;
+      color: var(--rx-ink-950);
       margin-top: .2rem
     }
 
@@ -10526,7 +10623,7 @@
       font-weight: 700;
       color: #a96a00;
       letter-spacing: .05em;
-      background: #fff5d6;
+      background: var(--rx-brand-100);
       padding: .18rem .5rem;
       border-radius: 6px;
       border: 1px solid rgba(255, 184, 0, .32);
@@ -10558,7 +10655,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #1a1330;
+      color: var(--rx-ink-950);
       margin-top: .18rem;
       box-shadow: 0 4px 10px -4px rgba(255, 184, 0, .55)
     }
@@ -10584,8 +10681,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #d97706;
-      background: #fff5d6;
+      color: var(--rx-brand-700);
+      background: var(--rx-brand-100);
       border: 1px solid rgba(255, 184, 0, .28)
     }
 
@@ -10602,7 +10699,7 @@
 
     .rx-journey-card.is-final .rx-journey-tag {
       background: linear-gradient(120deg, #ffd84d, #ffb800);
-      color: #1a1330;
+      color: var(--rx-ink-950);
       border-color: transparent
     }
 
@@ -10659,7 +10756,7 @@
       position: relative;
       border-radius: 24px;
       padding: 2rem 1.6rem;
-      background: linear-gradient(180deg, #fff, #fffbef);
+      background: linear-gradient(180deg, var(--rx-white), var(--rx-brand-50));
       border: 1px solid #ececf6;
       display: flex;
       flex-direction: column;
@@ -10683,7 +10780,7 @@
       justify-content: center;
       background: linear-gradient(135deg, #fff5d6, #fff);
       border: 1px solid rgba(255, 184, 0, .32);
-      color: #d97706;
+      color: var(--rx-brand-700);
       position: relative
     }
 
@@ -10700,7 +10797,7 @@
       font-size: 1.06rem;
       font-weight: 800;
       letter-spacing: -.01em;
-      color: #161626
+      color: var(--rx-ink-950)
     }
 
     .rx-own-card p {
@@ -10729,7 +10826,7 @@
     .rx-own-bottom em {
       font-family: 'Instrument Serif', Georgia, serif;
       font-style: italic;
-      color: #ffd84d;
+      color: var(--rx-brand-300);
       font-weight: 400;
       font-size: 1.15em;
       margin: 0 .15em
@@ -10772,7 +10869,7 @@
       text-align: left;
       font-size: 1rem;
       font-weight: 700;
-      color: #161626;
+      color: var(--rx-ink-950);
       background: transparent
     }
 
@@ -10786,7 +10883,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #ffb800;
+      color: var(--rx-brand-500);
       transition: transform .35s ease
     }
 
@@ -10886,7 +10983,7 @@
     }
 
     .rx-final-sub {
-      color: #dcdce8;
+      color: var(--rx-ink-200);
       font-size: 1.05rem;
       max-width: 60ch
     }
@@ -10905,7 +11002,7 @@
       font-family: 'Instrument Serif', Georgia, serif;
       font-style: italic;
       font-weight: 400;
-      color: #fff1b8;
+      color: var(--rx-brand-100);
       font-size: 1.5rem
     }
 
@@ -10917,7 +11014,7 @@
       padding: 1.1rem 1.8rem;
       border-radius: 999px;
       background: linear-gradient(120deg, #fff, #ffe8f1);
-      color: #161626;
+      color: var(--rx-ink-950);
       font-weight: 900;
       font-size: 1.05rem;
       letter-spacing: .005em;
@@ -10967,7 +11064,7 @@
       width: 5px;
       height: 5px;
       border-radius: 999px;
-      background: #ffb800
+      background: var(--rx-brand-500)
     }
 
     /* Marquee bands */
@@ -10993,12 +11090,12 @@
       font-family: 'Instrument Serif', Georgia, serif;
       font-style: italic;
       font-size: 1.6rem;
-      color: #fff1b8;
+      color: var(--rx-brand-100);
       white-space: nowrap
     }
 
     .rx-marquee-band em {
-      color: #5f6cff;
+      color: var(--rx-brand-600);
       font-style: normal;
       margin: 0 .4rem
     }
@@ -11017,7 +11114,7 @@
       width: 8px;
       height: 8px;
       border-radius: 999px;
-      background: #ffb800;
+      background: var(--rx-brand-500);
       box-shadow: 0 0 12px #ffb800;
       align-self: center
     }
@@ -11049,7 +11146,7 @@
     .rx-hero-micro {
       margin-top: .85rem;
       font-size: .84rem;
-      color: #7d7d95;
+      color: var(--rx-text-secondary);
       text-align: center;
       font-style: italic
     }
@@ -11074,7 +11171,7 @@
       width: 6px;
       height: 6px;
       border-radius: 999px;
-      background: #ffb800;
+      background: var(--rx-brand-500);
       box-shadow: 0 0 0 4px rgba(255, 184, 0, .18);
       animation: rx-pulse 2s ease-in-out infinite
     }
@@ -11140,14 +11237,14 @@
       font-weight: 700;
       letter-spacing: .16em;
       text-transform: uppercase;
-      color: #fff1b8
+      color: var(--rx-brand-100)
     }
 
     .rx-footer-tag .rx-footer-dot {
       width: 7px;
       height: 7px;
       border-radius: 999px;
-      background: #ffb800;
+      background: var(--rx-brand-500);
       box-shadow: 0 0 0 4px rgba(255, 184, 0, .22);
       animation: rx-pulse 2s ease-in-out infinite
     }
@@ -11195,13 +11292,13 @@
 
     .rx-footer-tagline {
       max-width: 48ch;
-      color: #cfcfe0;
+      color: var(--rx-ink-200);
       font-size: 1.05rem;
       line-height: 1.55
     }
 
     .rx-footer-tagline .rx-hl {
-      color: #1a1330;
+      color: var(--rx-ink-950);
       font-size: .95em;
       padding: .05em .35em
     }
@@ -11213,7 +11310,7 @@
       padding: 1.1rem 2rem;
       border-radius: 999px;
       background: linear-gradient(120deg, #ffd84d, #ffb800);
-      color: #1a1330;
+      color: var(--rx-ink-950);
       font-weight: 900;
       font-size: 1.05rem;
       border: 1px solid rgba(255, 255, 255, .4);
@@ -11256,7 +11353,7 @@
       width: max-content;
       animation: rx-marquee 36s linear infinite;
       align-items: center;
-      color: #fff1b8;
+      color: var(--rx-brand-100);
       font-size: .96rem;
       font-weight: 600;
       letter-spacing: .04em
@@ -11267,7 +11364,7 @@
     }
 
     .rx-footer-marquee-track span:nth-child(odd) {
-      color: #ffb800
+      color: var(--rx-brand-500)
     }
 
     .rx-footer-meta {
@@ -11305,14 +11402,14 @@
     }
 
     .rx-footer-meta-left strong span {
-      color: #9aa0c2;
+      color: var(--rx-ink-300);
       font-weight: 500;
       font-size: .85rem;
       margin-left: .35rem
     }
 
     .rx-footer-meta-left small {
-      color: #9aa0c2;
+      color: var(--rx-ink-300);
       font-size: .82rem
     }
 
@@ -11331,14 +11428,14 @@
       justify-content: center;
       background: rgba(255, 255, 255, .06);
       border: 1px solid rgba(255, 255, 255, .1);
-      color: #fff1b8;
+      color: var(--rx-brand-100);
       transition: transform .25s ease, background .3s ease, color .3s ease, border-color .3s ease
     }
 
     .rx-footer-meta-right a:hover {
       transform: translateY(-2px);
       background: linear-gradient(120deg, #ffd84d, #ffb800);
-      color: #1a1330;
+      color: var(--rx-ink-950);
       border-color: transparent
     }
 
@@ -11384,7 +11481,7 @@
       margin-top: 5rem;
       width: 100%;
       background: linear-gradient(135deg, #0e1326, #1b1638);
-      color: #cfcfe0;
+      color: var(--rx-ink-200);
       padding: 3.4rem 1.5rem 2rem;
       position: relative;
       overflow: hidden
@@ -11432,13 +11529,13 @@
     }
 
     .rx-footer-brand p {
-      color: #cfcfe0;
+      color: var(--rx-ink-200);
       font-size: .95rem;
       line-height: 1.5
     }
 
     .rx-footer-brand small {
-      color: #9aa0c2;
+      color: var(--rx-ink-300);
       font-size: .85rem
     }
 
@@ -11455,7 +11552,7 @@
       display: flex;
       flex-direction: column;
       gap: .5rem;
-      color: #cfcfe0;
+      color: var(--rx-ink-200);
       font-size: .95rem
     }
 
@@ -11464,7 +11561,7 @@
     }
 
     .rx-footer-links a:hover {
-      color: #ffd84d
+      color: var(--rx-brand-300)
     }
 
     .rx-footer-cta {
@@ -11491,7 +11588,7 @@
       margin-top: 2.4rem;
       padding-top: 1.4rem;
       border-top: 1px solid rgba(255, 255, 255, .08);
-      color: #9aa0c2;
+      color: var(--rx-ink-300);
       font-size: .82rem;
       text-align: center
     }
@@ -11804,11 +11901,6 @@
         RevX runs your ads, funnel, CRM, and automation under <span class="rx-hl">one fixed monthly fee</span>.
         Zero revenue share. Zero % on ad spend. You keep the profit your scale was supposed to give you.
       </p>
-      <div class="rx-hero-trust" aria-label="Trust signals">
-        <span>₹50Cr+ ad budget managed</span>
-        <span>1,00,000+ creators supported</span>
-        <span>Backed by Y Combinator, Lightspeed, Chiratae, Kunal Shah</span>
-      </div>
       <a class="exly-cta-btn" href="https://affiliate.exlyapp.com/checkout/dba8ed2e-cd6d-4c63-884d-ba0b0e3f017c">Get My
         Profit Growth Plan<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -12143,14 +12235,15 @@
       <div class="rx-villain">
         <div class="rx-villain-inner">
           <span class="rx-eyebrow is-dark"><span class="rx-eyebrow-dot"></span>The math nobody shows you</span>
-          <h2 class="rx-rise" style="margin-top:1rem">Your agency gets a <span class="rx-hl is-light">raise</span> every
+          <h2 class="rx-rise" style="margin-top:1rem">Your agency gets a <span class="rx-hl is-light">hike</span> every
             time you scale.</h2>
           <div class="rx-villain-body">
             <div class="rx-rise d1">
               <p>Most creator agencies charge <strong>12–18% of ad spend</strong>. Sounds small. Run the numbers.</p>
               <p>At <strong>₹5L/month</strong> ad spend, that's <strong>₹6L/year</strong>. At
                 <strong>₹10L/month</strong>, <strong>₹18L/year</strong>. Same team. Same dashboards. Same weekly call.
-                You just got more expensive to them — not better served.</p>
+                You just got more expensive to them — not better served.
+              </p>
             </div>
             <div class="rx-tax-chart rx-rise d2" aria-hidden="true">
               <div class="rx-tax-chart-head">
@@ -12233,7 +12326,7 @@
       <div class="rx-section-head">
         <span class="rx-eyebrow"><span class="rx-eyebrow-dot"></span>Fee is only leak #1</span>
         <h2 class="rx-rise">Every creator scaling ads is leaking profit from <span class="rx-hl">5 places</span>. Most
-          only know about <span class="rx-hl-line d1">one</span>.</h2>
+          only know about <span class="rx-hl d1">one</span>.</h2>
         <p class="rx-rise d1">We've audited 400+ creator ad accounts. The same 5 leaks show up in 9 out of 10. Here they
           are, in plain English.</p>
       </div>
@@ -12412,7 +12505,8 @@
       </div>
 
       <p class="rx-fix-bottom rx-rise d3">Same deliverables. <span class="rx-hl">Different business model.</span>
-        <em>That's the whole pitch.</em></p>
+        <em>That's the whole pitch.</em>
+      </p>
     </section>
 
     <!-- ===== CTA BLOCK 2 ===== -->
@@ -12434,22 +12528,6 @@
         <span class="rx-eyebrow"><span class="rx-eyebrow-dot"></span>What's included in one fee</span>
         <h2 class="rx-rise">The full <em>growth stack</em>. Built, managed, optimized.</h2>
         <p class="rx-rise d1">Meta. Google. WhatsApp. Razorpay. CRM. Calendar. All wired into one cockpit.</p>
-      </div>
-
-      <!-- Floating brand-logo strip -->
-      <!-- Floating brand-logo strip (real assets) -->
-      <div class="rx-logo-strip rx-rise d1" aria-hidden="true">
-        <span class="rx-logo-chip"><img src="assets/img/meta.png" alt="" loading="lazy" decoding="async" /></span>
-        <span class="rx-logo-chip"><img src="assets/img/google-ads.png" alt="" loading="lazy" decoding="async" /></span>
-        <span class="rx-logo-chip"><img src="assets/img/gmail.png" alt="" loading="lazy" decoding="async" /></span>
-        <span class="rx-logo-chip"><img src="assets/img/google-calendar.png" alt="" loading="lazy"
-            decoding="async" /></span>
-        <span class="rx-logo-chip"><img src="assets/img/rupee-coin.png" alt="" loading="lazy" decoding="async" /></span>
-        <span class="rx-logo-chip is-zap">
-          <svg viewBox="0 0 40 40">
-            <path d="M22 4 L8 22 H18 L14 36 L32 16 H22 Z" fill="#ffb800" />
-          </svg>
-        </span>
       </div>
 
       <div class="rx-stack-wrap">
@@ -12793,7 +12871,8 @@
           </button>
           <div class="rx-faq-a">
             <div class="rx-faq-a-inner">A named senior media buyer + a funnel builder + an automation engineer.
-              <strong>You talk to them. Not to a sales rep.</strong></div>
+              <strong>You talk to them. Not to a sales rep.</strong>
+            </div>
           </div>
         </div>
         <div class="rx-faq-item">
@@ -12806,7 +12885,8 @@
           </button>
           <div class="rx-faq-a">
             <div class="rx-faq-a-inner">An in-house team costs ₹8L+/month for this scope and takes 6 months to hire.
-              <strong>We start on Day 1.</strong></div>
+              <strong>We start on Day 1.</strong>
+            </div>
           </div>
         </div>
         <div class="rx-faq-item">
